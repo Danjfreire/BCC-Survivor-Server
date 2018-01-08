@@ -6,11 +6,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Questao {
+public class QuestaoJogo {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
+	private String disciplina;
 	private String texto;
 	private String alternativa1;
 	private String alternativa2;
@@ -25,6 +26,14 @@ public class Questao {
 		this.id = id;
 	}
 
+	public String getDisciplina() {
+		return disciplina;
+	}
+
+	public void setDisciplina(String disciplina) {
+		this.disciplina = disciplina;
+	}
+	
 	public String getTexto() {
 		return texto;
 	}
