@@ -30,7 +30,11 @@ public class ControlUsuario {
 		System.out.println(login);
 		System.out.println(senha);
 		
-		return repoUser.findUsuarioByLogin(login);
+		Usuario u = repoUser.findUsuarioByLogin(login);
+		if(u != null)
+			return u;
+		
+		return null;
 	}
 	
 	@GetMapping("/cadastro")
@@ -42,11 +46,10 @@ public class ControlUsuario {
 			u.setEmail(email);
 			
 			//Player p = new Player();
-			
-			
+				
 			repoUser.save(u);
 		}catch (Exception e) {
-			return "Falha no login";
+			return "Falha no cadastro";
 		}
 		
 		return "Saved";

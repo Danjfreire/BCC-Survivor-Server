@@ -30,6 +30,15 @@ public class ControlQuestao {
 		q.setResposta("Java");
 		repo.save(q);
 		
+		QuestaoJogo q2 = new QuestaoJogo();
+		q2.setTexto("Quais desses tipos primitivos não existem em C");
+		q2.setAlternativa1("int");
+		q2.setAlternativa2("char");
+		q2.setAlternativa3("double");
+		q2.setResposta("string");
+		q2.setDisciplina("Programacao I");
+		repo.save(q2);
+		
 		return "Saved";
 	}
 	
