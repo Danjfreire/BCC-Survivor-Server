@@ -22,8 +22,8 @@ public class ControlQuestao {
 	public @ResponseBody String addQuestao() {
 		
 		QuestaoJogo q = new QuestaoJogo();
-		q.setTexto("Qual sua linguagem de programa��o favorita?");
-		q.setDisciplina("Programacao");
+		q.setTexto("Qual sua linguagem de programação favorita?");
+		q.setDisciplina("Introdução");
 		q.setAlternativa1("C");
 		q.setAlternativa2("Python");
 		q.setAlternativa3("C#");
