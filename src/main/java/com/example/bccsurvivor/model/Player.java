@@ -16,6 +16,31 @@ public class Player {
 	private Integer numVidas;
 	private Integer pulos;
 	private Integer score;
+	private Integer scoreRecorde;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getNickname() {
+		return nickname;
+	}
+
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
+
+	public Integer getScoreRecorde() {
+		return scoreRecorde;
+	}
+
+	public void setScoreRecorde(Integer scoreRecorde) {
+		this.scoreRecorde = scoreRecorde;
+	}
 
 	public Integer getFaseAtual() {
 		return faseAtual;

@@ -30,6 +30,15 @@ public class ControlQuestao {
 		q.setResposta("Java");
 		repo.save(q);
 		
+		QuestaoJogo q3 = new QuestaoJogo();
+		q3.setTexto("Qual não é um tipo de memoria?");
+		q3.setDisciplina("Introdução");
+		q3.setAlternativa1("SSD");
+		q3.setAlternativa2("RAM");
+		q3.setAlternativa3("PENDRIVE");
+		q3.setResposta("COOLER");
+		repo.save(q3);
+		
 		QuestaoJogo q2 = new QuestaoJogo();
 		q2.setTexto("Quais desses tipos primitivos não existem em C");
 		q2.setAlternativa1("int");
