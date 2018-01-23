@@ -8,4 +8,5 @@ import com.example.bccsurvivor.model.QuestaoJogo;
 public interface RepositorioPlayer extends CrudRepository<Player, Long>{
 
 	public Player findPlayerById(Integer id);
+
 }
