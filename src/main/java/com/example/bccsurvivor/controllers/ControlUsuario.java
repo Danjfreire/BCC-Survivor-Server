@@ -49,22 +49,10 @@ public class ControlUsuario {
 	public @ResponseBody String cadastrarUsuario(@RequestParam String login, String senha, String email,
 			String nickname) {
 		try {
-			Usuario u = new Usuario();
-			u.setLogin(login);
-			u.setSenha(senha);
-			u.setEmail(email);
-
-			Player p = new Player();
-			p.setFaseAtual(1);
-			p.setPulos(1);
-			p.setNumVidas(3);
-			p.setScore(0);
-			p.setScoreRecorde(0);
-			p.setNickname(nickname);
-
-			repoUser.save(u);
-			repoPlayer.save(p);
-
+			System.out.println(login);
+			System.out.println(senha);
+			System.out.println(email);
+			System.out.println(nickname);
 		} catch (Exception e) {
 			return "Falha no cadastro";
 		}
