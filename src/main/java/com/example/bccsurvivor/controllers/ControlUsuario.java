@@ -88,5 +88,10 @@ public class ControlUsuario {
 		
 		repoPlayer.save(playerSalvo);
 	}
+	
+	@RequestMapping("/players")
+	public @ResponseBody Iterable<Player> allPlayers(){
+		return repoPlayer.findAll();
+	}
 
 }
