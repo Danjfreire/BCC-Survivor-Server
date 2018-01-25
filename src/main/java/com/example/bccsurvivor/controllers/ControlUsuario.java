@@ -36,7 +36,7 @@ public class ControlUsuario {
 		System.out.println(login);
 		System.out.println(senha);
 
-		Usuario u = repoUser.findUsuarioByLogin(login);
+		Usuario u = repoUser.findUsuarioByLoginAndSenha(login,senha);
 		if (u != null) {
 			Player p = repoPlayer.findPlayerById(u.getId());
 			return p;
@@ -49,22 +49,23 @@ public class ControlUsuario {
 	public @ResponseBody String cadastrarUsuario(@RequestParam String login, String senha, String email,
 			String nickname) {
 		try {
-			Usuario u = new Usuario();
-			u.setLogin(login);
-			u.setSenha(senha);
-			u.setEmail(email);
-
-			Player p = new Player();
-			p.setFaseAtual(1);
-			p.setPulos(1);
-			p.setNumVidas(3);
-			p.setScore(0);
-			p.setScoreRecorde(0);
-			p.setNickname(nickname);
-
-			repoUser.save(u);
-			repoPlayer.save(p);
-
+		Usuario u = new  Usuario();
+		u.setEmail(email);
+		u.setLogin(login);
+		u.setSenha(senha);
+		
+		repoUser.save(u);
+		
+		Player p = new Player();
+		p.setFaseAtual(1);
+		p.setNickname(nickname);
+		p.setNumVidas(3);
+		p.setPulos(1);
+		p.setScore(0);
+		p.setScoreRecorde(0);
+		
+		repoPlayer.save(p);
+			
 		} catch (Exception e) {
 			return "Falha no cadastro";
 		}
@@ -87,6 +88,11 @@ public class ControlUsuario {
 		playerSalvo.setScoreRecorde(player.getScoreRecorde());
 		
 		repoPlayer.save(playerSalvo);
+	}
+	
+	@RequestMapping("/players")
+	public @ResponseBody Iterable<Player> allPlayers(){
+		return repoPlayer.findAll();
 	}
 
 }
