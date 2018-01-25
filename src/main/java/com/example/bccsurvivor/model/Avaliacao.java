@@ -9,16 +9,16 @@ public class Avaliacao {
 	
 	@Id
 	@GeneratedValue
-	private Integer idAvalicao;
+	private Integer idAvaliacao;
 	private Integer idQuestao;
 	private Integer idUsuario;
 	private Integer tipoAvaliacao;
 	private Integer valorAvaliacao;
-	public Integer getIdAvalicao() {
-		return idAvalicao;
+	public Integer getIdAvaliacao() {
+		return idAvaliacao;
 	}
-	public void setIdAvalicao(Integer idAvalicao) {
-		this.idAvalicao = idAvalicao;
+	public void setIdAvaliacao(Integer idAvalicao) {
+		this.idAvaliacao = idAvalicao;
 	}
 	public Integer getIdQuestao() {
 		return idQuestao;

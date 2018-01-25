@@ -15,7 +15,6 @@ public class QuestaoBanco {
 	private String respostaQuestao;
 	private String disciplinaQuestao;
 	private String assuntoQuestao;
-	private Date dataQuestao;
 	private Integer autorQuestao;
 	public Integer getIdQuestao() {
 		return idQuestao;
@@ -46,12 +45,6 @@ public class QuestaoBanco {
 	}
 	public void setAssuntoQuestao(String assuntoQuestao) {
 		this.assuntoQuestao = assuntoQuestao;
-	}
-	public Date getDataQuestao() {
-		return dataQuestao;
-	}
-	public void setDataQuestao(Date dataQuestao) {
-		this.dataQuestao = dataQuestao;
 	}
 	public void setAutorQuestao(Integer autorQuestao) {
 		this.autorQuestao = autorQuestao;
