@@ -65,7 +65,6 @@ public class ControlUsuario {
 		p.setScoreRecorde(0);
 		
 		repoPlayer.save(p);
-			
 		} catch (Exception e) {
 			return "Falha no cadastro";
 		}
