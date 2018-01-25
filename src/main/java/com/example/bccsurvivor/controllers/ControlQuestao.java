@@ -1,5 +1,14 @@
 package com.example.bccsurvivor.controllers;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,6 +19,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.bccsurvivor.data.RespositorioQuestao;
 import com.example.bccsurvivor.model.QuestaoJogo;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 @Controller
 @RequestMapping(path="/bccsurvivor")
@@ -61,4 +72,20 @@ public class ControlQuestao {
 		return repo.findQuestaoJogoByDisciplina(disciplina);
 	}
 
+	@Autowired
+	private void load() {
+		try {
+			File file = new File("questoes-jogo.json");
+			InputStream targetStream = new FileInputStream(file);
+			Reader reader = new InputStreamReader(targetStream);
+			Gson gson = new GsonBuilder().create();
+			List<QuestaoJogo> questoes = Arrays.asList(gson.fromJson(reader, QuestaoJogo[].class));
+			repo.save(questoes);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	
 }

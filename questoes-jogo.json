@@ -1,0 +1,43 @@
+[
+    {
+        "disciplina": "Programacao I",
+        "texto": "Quail desses tipos primitivos não existe em C",
+        "alternativa1": "int",
+        "alternativa2": "char",
+        "alternativa3": "double",
+        "resposta": "string"
+    },
+    {
+        "disciplina": "Programacao II",
+        "texto": "Qual o padrão de projeto que permite que exista no máximo uma instância de uma determinado objeto?",
+        "alternativa1": "Command",
+        "alternativa2": "Builder",
+        "alternativa3": "Observer",
+        "resposta": "Singleton"
+    },
+    {
+        "disciplina": "Circuitos",
+        "texto": "Qual das seguintes siglas não representa um flip-flop?",
+        "alternativa1": "J-K",
+        "alternativa2": "D",
+        "alternativa3": "T",
+        "resposta": "K"
+    },
+    {
+        "disciplina": "Inteligencia Artificial",
+        "texto": "Qual dos seguintes é um algoritmo probabilistico?",
+        "alternativa1": "K-means",
+        "alternativa2": "KNN",
+        "alternativa3": "Árvore de decisão",
+        "resposta": "Naive Bayes"
+    },
+    {
+        "disciplina": "Desenvolvimento móvel",
+        "texto": "Quail desses bancos de dados está presente no android?",
+        "alternativa1": "H2",
+        "alternativa2": "Oracle",
+        "alternativa3": "MongoDB",
+        "resposta": "SQLite"
+    }
+
+]

@@ -1,8 +1,13 @@
 package com.example.bccsurvivor.controllers;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.util.Arrays;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,6 +22,7 @@ import com.example.bccsurvivor.data.RepositorioPlayer;
 import com.example.bccsurvivor.data.RepositorioUser;
 import com.example.bccsurvivor.model.LoginRequest;
 import com.example.bccsurvivor.model.Player;
+import com.example.bccsurvivor.model.QuestaoJogo;
 import com.example.bccsurvivor.model.Usuario;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -36,7 +42,7 @@ public class ControlUsuario {
 		System.out.println(login);
 		System.out.println(senha);
 
-		Usuario u = repoUser.findUsuarioByLogin(login);
+		Usuario u = repoUser.findUsuarioByLoginAndSenha(login,senha);
 		if (u != null) {
 			Player p = repoPlayer.findPlayerById(u.getId());
 			return p;
@@ -49,10 +55,23 @@ public class ControlUsuario {
 	public @ResponseBody String cadastrarUsuario(@RequestParam String login, String senha, String email,
 			String nickname) {
 		try {
-			System.out.println(login);
-			System.out.println(senha);
-			System.out.println(email);
-			System.out.println(nickname);
+		Usuario u = new  Usuario();
+		u.setEmail(email);
+		u.setLogin(login);
+		u.setSenha(senha);
+		
+		repoUser.save(u);
+		
+		Player p = new Player();
+		p.setFaseAtual(1);
+		p.setNickname(nickname);
+		p.setNumVidas(3);
+		p.setPulos(1);
+		p.setScore(0);
+		p.setScoreRecorde(0);
+		
+		repoPlayer.save(p);
+
 		} catch (Exception e) {
 			return "Falha no cadastro";
 		}
