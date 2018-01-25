@@ -16,10 +16,6 @@ public class QuestaoBanco {
 	private String disciplinaQuestao;
 	private String assuntoQuestao;
 	private Date dataQuestao;
-	private Integer gostouPergunta;
-	private Integer gostouResposta;
-	private Integer naoGostouPergunta;
-	private Integer naoGostouResposta;
 	private Integer autorQuestao;
 	public Integer getIdQuestao() {
 		return idQuestao;
@@ -56,33 +52,6 @@ public class QuestaoBanco {
 	}
 	public void setDataQuestao(Date dataQuestao) {
 		this.dataQuestao = dataQuestao;
-	}
-	public Integer getGostouPergunta() {
-		return gostouPergunta;
-	}
-	public void setGostouPergunta(Integer gostouPergunta) {
-		this.gostouPergunta = gostouPergunta;
-	}
-	public Integer getGostouResposta() {
-		return gostouResposta;
-	}
-	public void setGostouResposta(Integer gostouResposta) {
-		this.gostouResposta = gostouResposta;
-	}
-	public Integer getNaoGostouPergunta() {
-		return naoGostouPergunta;
-	}
-	public void setNaoGostouPergunta(Integer naoGostouPergunta) {
-		this.naoGostouPergunta = naoGostouPergunta;
-	}
-	public Integer getNaoGostouResposta() {
-		return naoGostouResposta;
-	}
-	public void setNaoGostouResposta(Integer naoGostouResposta) {
-		this.naoGostouResposta = naoGostouResposta;
-	}
-	public Integer getAutorQuestao() {
-		return autorQuestao;
 	}
 	public void setAutorQuestao(Integer autorQuestao) {
 		this.autorQuestao = autorQuestao;
