@@ -33,7 +33,7 @@ public class ControlAvaliacao {
 	}
 	
 	@GetMapping("/avaliacao")
-	public @ResponseBody Iterable<Avaliacao> buscarIdQUT(@RequestParam Integer idQuestao,@RequestParam Integer idUsuario,@RequestParam Integer tipoAvaliacao) {
+	public @ResponseBody Iterable<Avaliacao> buscarIdQUT(@RequestParam Integer idQuestao,@RequestParam Integer idUsuario, @RequestParam Integer tipoAvaliacao) {
 		return repositorio.findByIdQuestaoAndIdUsuarioAndTipoAvaliacao(idQuestao, idUsuario, tipoAvaliacao);
 	}
 }

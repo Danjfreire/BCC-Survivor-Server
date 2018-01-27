@@ -1,6 +1,5 @@
 package com.example.bccsurvivor.model;
 
-import java.sql.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,6 +15,10 @@ public class QuestaoBanco {
 	private String disciplinaQuestao;
 	private String assuntoQuestao;
 	private Integer autorQuestao;
+	
+	public Integer getAutorQuestao() {
+		return autorQuestao;
+	}
 	public Integer getIdQuestao() {
 		return idQuestao;
 	}

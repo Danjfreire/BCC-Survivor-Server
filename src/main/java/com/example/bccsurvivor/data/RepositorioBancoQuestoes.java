@@ -7,7 +7,7 @@ import com.example.bccsurvivor.model.QuestaoBanco;
 
 public interface RepositorioBancoQuestoes extends CrudRepository<QuestaoBanco, Long>{
 	
-	public List<QuestaoBanco> findByDisciplinaQuestao(String disciplinaQuestao);
+	public List<QuestaoBanco> findByDisciplinaQuestaoOrderByIdQuestaoDesc(String disciplinaQuestao);
 	
 	public List<QuestaoBanco> findByIdQuestao(Integer idQuestao);
 }

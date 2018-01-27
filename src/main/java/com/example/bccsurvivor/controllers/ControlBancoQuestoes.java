@@ -1,5 +1,6 @@
 package com.example.bccsurvivor.controllers;
 
+import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.sql.Date;
 import java.util.Calendar;
@@ -35,9 +36,8 @@ public class ControlBancoQuestoes {
 		return repositorio.findByIdQuestao(idQuestao);
 	}
 	
-	@GetMapping("/disciplina_questao")
-	public @ResponseBody Iterable<QuestaoBanco> buscarQuestoes(@RequestParam String disciplinaQuestao) {
-		
-		return repositorio.findByDisciplinaQuestao(disciplinaQuestao);
+	@GetMapping("/disciplina_questao/{disciplina}")
+	public @ResponseBody Iterable<QuestaoBanco> buscarQuestoes(@PathVariable("disciplina") String disciplinaQuestao) throws UnsupportedEncodingException {
+		return repositorio.findByDisciplinaQuestaoOrderByIdQuestaoDesc(URLDecoder.decode(disciplinaQuestao,"UTF-8"));
 	}
 }
