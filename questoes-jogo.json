@@ -1,7 +1,15 @@
 [
+	{
+		"disciplina": "Introdução",
+        "texto": "Qual foi o primeiro computador digital eletrônico de larga escala?",
+        "alternativa1": "ENIGMA",
+        "alternativa2": "IBM 7030 ",
+        "alternativa3": "Altair 8800 ",
+        "resposta": "ENIAC"
+	},
     {
         "disciplina": "Programacao I",
-        "texto": "Quail desses tipos primitivos não existe em C",
+        "texto": "Qual desses tipos primitivos não existe em C",
         "alternativa1": "int",
         "alternativa2": "char",
         "alternativa3": "double",
@@ -17,7 +25,7 @@
     },
     {
         "disciplina": "Circuitos",
-        "texto": "Qual das seguintes siglas não representa um flip-flop?",
+        "texto": "Qual das seguintes siglas nÃ£o representa um flip-flop?",
         "alternativa1": "J-K",
         "alternativa2": "D",
         "alternativa3": "T",
@@ -33,7 +41,7 @@
     },
     {
         "disciplina": "Desenvolvimento móvel",
-        "texto": "Quail desses bancos de dados está presente no android?",
+        "texto": "Qual desses bancos de dados está presente no android?",
         "alternativa1": "H2",
         "alternativa2": "Oracle",
         "alternativa3": "MongoDB",
