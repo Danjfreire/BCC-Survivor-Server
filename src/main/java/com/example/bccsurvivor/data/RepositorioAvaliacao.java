@@ -11,4 +11,6 @@ public interface RepositorioAvaliacao extends CrudRepository<Avaliacao, Long>  {
 	public List<Avaliacao> findByIdQuestaoAndIdUsuarioAndTipoAvaliacao(Integer idQuestao, Integer idUsuario, Integer tipoAvaliacao);
 	
 	public List<Avaliacao> findByIdQuestao(Integer idQuestao);
+	
+	public List<Avaliacao> findByIdQuestaoAndTipoAvaliacaoAndValorAvaliacao(Integer idQuestao, Integer tipoAvaliacao, Integer valorAvaliacao);
 }

@@ -36,4 +36,9 @@ public class ControlAvaliacao {
 	public @ResponseBody Iterable<Avaliacao> buscarIdQUT(@RequestParam Integer idQuestao,@RequestParam Integer idUsuario, @RequestParam Integer tipoAvaliacao) {
 		return repositorio.findByIdQuestaoAndIdUsuarioAndTipoAvaliacao(idQuestao, idUsuario, tipoAvaliacao);
 	}
+	
+	@GetMapping("/quantidade")
+	public @ResponseBody Iterable<Avaliacao> buscarQuantidade(@RequestParam Integer idQuestao,@RequestParam Integer tipoAvaliacao, @RequestParam Integer valorAvaliacao) {
+		return repositorio.findByIdQuestaoAndTipoAvaliacaoAndValorAvaliacao(idQuestao, tipoAvaliacao, valorAvaliacao);
+	}
 }

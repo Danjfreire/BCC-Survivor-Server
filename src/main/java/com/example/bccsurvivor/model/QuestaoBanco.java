@@ -8,7 +8,6 @@ import javax.persistence.Id;
 public class QuestaoBanco {
 	
 	@Id
-	@GeneratedValue
 	private Integer idQuestao;
 	private String perguntaQuestao;
 	private String respostaQuestao;

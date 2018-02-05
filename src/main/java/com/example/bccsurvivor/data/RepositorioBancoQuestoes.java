@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import com.example.bccsurvivor.model.QuestaoBanco;
 
-public interface RepositorioBancoQuestoes extends CrudRepository<QuestaoBanco, Long>{
+public interface RepositorioBancoQuestoes extends CrudRepository<QuestaoBanco, Integer>{
 	
 	public List<QuestaoBanco> findByDisciplinaQuestaoOrderByIdQuestaoDesc(String disciplinaQuestao);
 	
